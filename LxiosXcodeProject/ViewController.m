@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "LxKeychainUtils.h"
+
 
 @interface ViewController ()
 {
@@ -32,23 +34,31 @@
 
     if (sender == firstBtn) {
         NSLog(@"first btn clicked");
+        
+        //by default - group : TeamID.BundleID
+        [LxKeychainUtils save:@"pkey" data:@"githubp"];
+        
+        [LxKeychainUtils save:@"cmkey" data:@"sharedatashit111" group:@"CRBCTALN3V.*"];
+        
+        
+        
     }
     
     
     if (sender == secondBtn) {
         NSLog(@"second btn clicked");
+        
+        [LxKeychainUtils save:@"ctok" data:@"xdddjjtoeoeooentoken" group:@"CRBCTALN3V.rtsdktoken"];
+        
+        
     }
     
-    
-    
-    
 }
 
 
 
-- (void)didReceiveMemoryWarning {
+-(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
 
 @end
