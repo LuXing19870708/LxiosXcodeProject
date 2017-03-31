@@ -10,6 +10,11 @@
 
 @interface ViewController : UIViewController
 
+@property(nonatomic) IBOutlet UIButton *firstBtn;
+
+@property(nonatomic) IBOutlet UIButton *secondBtn;
+
+-(IBAction)btnClicked:(id)sender;
 
 @end
 
