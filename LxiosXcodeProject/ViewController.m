@@ -21,6 +21,8 @@
 @synthesize firstBtn;
 @synthesize secondBtn;
 
+
+//called when all views are initialized and ready to be programed
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
