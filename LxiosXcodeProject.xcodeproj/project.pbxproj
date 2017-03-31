@@ -13,6 +13,7 @@
 		637B37241E8DE8B4006D5CED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637B37221E8DE8B4006D5CED /* Main.storyboard */; };
 		637B37261E8DE8B4006D5CED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 637B37251E8DE8B4006D5CED /* Assets.xcassets */; };
 		637B37291E8DE8B4006D5CED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637B37271E8DE8B4006D5CED /* LaunchScreen.storyboard */; };
+		637B37321E8DF323006D5CED /* LxKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 637B37311E8DF323006D5CED /* LxKeychainUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		637B37251E8DE8B4006D5CED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		637B37281E8DE8B4006D5CED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		637B372A1E8DE8B4006D5CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		637B37301E8DF323006D5CED /* LxKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxKeychainUtils.h; sourceTree = "<group>"; };
+		637B37311E8DF323006D5CED /* LxKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LxKeychainUtils.m; sourceTree = "<group>"; };
+		63A9C2021E8E020400F80B31 /* LxiosXcodeProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LxiosXcodeProject.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		637B37181E8DE8B4006D5CED /* LxiosXcodeProject */ = {
 			isa = PBXGroup;
 			children = (
+				63A9C2021E8E020400F80B31 /* LxiosXcodeProject.entitlements */,
 				637B371C1E8DE8B4006D5CED /* AppDelegate.h */,
 				637B371D1E8DE8B4006D5CED /* AppDelegate.m */,
 				637B371F1E8DE8B4006D5CED /* ViewController.h */,
@@ -67,6 +72,8 @@
 				637B37271E8DE8B4006D5CED /* LaunchScreen.storyboard */,
 				637B372A1E8DE8B4006D5CED /* Info.plist */,
 				637B37191E8DE8B4006D5CED /* Supporting Files */,
+				637B37301E8DF323006D5CED /* LxKeychainUtils.h */,
+				637B37311E8DF323006D5CED /* LxKeychainUtils.m */,
 			);
 			path = LxiosXcodeProject;
 			sourceTree = "<group>";
@@ -112,6 +119,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = CRBCTALN3V;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -152,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				637B37211E8DE8B4006D5CED /* ViewController.m in Sources */,
+				637B37321E8DF323006D5CED /* LxKeychainUtils.m in Sources */,
 				637B371E1E8DE8B4006D5CED /* AppDelegate.m in Sources */,
 				637B371B1E8DE8B4006D5CED /* main.m in Sources */,
 			);
@@ -273,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LxiosXcodeProject/LxiosXcodeProject.entitlements;
 				DEVELOPMENT_TEAM = CRBCTALN3V;
 				INFOPLIST_FILE = LxiosXcodeProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -285,6 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LxiosXcodeProject/LxiosXcodeProject.entitlements;
 				DEVELOPMENT_TEAM = CRBCTALN3V;
 				INFOPLIST_FILE = LxiosXcodeProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -312,6 +327,7 @@
 				637B372F1E8DE8B4006D5CED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
